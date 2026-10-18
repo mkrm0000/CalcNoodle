@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CalcNoodle — Under Construction</title>
+  <meta name="description" content="CalcNoodle is an open-source collection of engineering & study tools, built by students, for students. Currently under construction.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍜</text></svg>">
+  <style>
+    :root {
+      --bg: #0f1117;
+      --panel: #171a23;
+      --text: #e6e8ee;
+      --muted: #9aa3b2;
+      --accent: #ffb347;
+      --accent-2: #6ee7b7;
+      --border: #262b38;
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f8fb;
+        --panel: #ffffff;
+        --text: #14161c;
+        --muted: #5a6373;
+        --accent: #d97706;
+        --accent-2: #059669;
+        --border: #e3e6ee;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      max-width: 640px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .logo {
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+      font-size: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 179, 71, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(255, 179, 71, 0.3);
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge::before {
+      content: "🚧";
+    }
+
+    p.note {
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+      font-size: 0.95rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: transform 0.08s ease, filter 0.15s ease;
+    }
+
+    .btn:hover { filter: brightness(1.08); }
+    .btn:active { transform: translateY(1px); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #14161c;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.6rem; }
+      .card { padding: 2rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="title">
+      <div class="logo" aria-hidden="true">🍜</div>
+      <h1 id="title">CalcNoodle</h1>
+      <p class="tagline">
+        An open-source collection of engineering &amp; study tools,
+        built by students, for students.
+      </p>
+
+      <span class="badge" role="status">Currently under construction</span>
+
+      <p class="note">
+        The site is being built tool by tool. Check back soon —
+        or dive into the repository and help build it.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/mkrm0000/calcnoodle" rel="noopener">
+          View on GitHub
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/mkrm0000/calcnoodle/blob/main/CONTRIBUTING.md" rel="noopener">
+          How to contribute
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 CalcNoodle Contributors &middot;
+      <a href="https://github.com/mkrm0000/calcnoodle/blob/main/LICENSE" rel="noopener">MIT License</a>
+    </p>
+  </footer>
+</body>
+</html>
