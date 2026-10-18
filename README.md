@@ -56,6 +56,56 @@ Tools are grouped by category:
 
 ---
 
+## Project structure
+
+```
+calcnoodle/
+├── index.html                  ← homepage / tool hub
+├── 404.html                    ← custom GitHub Pages 404
+├── tools.json                  ← manifest of all tools (slug, name, category, path)
+│
+├── assets/
+│   ├── global-style.css        ← design tokens + header/footer/button/card styles
+│   ├── global-script.js        ← injects header + footer, theme toggle, nav helpers
+│   ├── ads.js                  ← fills #ad-* slots (separate so tools can opt out)
+│   ├── header.html             ← header fragment, fetched at runtime
+│   ├── footer.html             ← footer fragment, fetched at runtime
+│   └── logo.svg                ← placeholder logo (CN monogram)
+│
+├── tools/
+│   └── <tool-slug>/            ← one folder per tool (kebab-case)
+│       ├── index.html          ← required
+│       ├── style.css           ← optional, tool-specific styles only
+│       └── script.js           ← optional, tool-specific logic
+│
+├── templates/
+│   └── tool-template/          ← copy this to start a new tool
+│       ├── index.html
+│       ├── style.css
+│       ├── script.js
+│       └── README.md
+│
+├── docs/
+│   ├── STYLE-GUIDE.md          ← CSS/HTML naming conventions, design tokens
+│   ├── ADS.md                  ← ad system spec (slots, sizes, provider config)
+│   ├── ARCHITECTURE.md         ← how header/footer injection works
+│   └── ROADMAP.md              ← planned vs out of scope
+│
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   ├── feature_request.md
+│   │   └── new_tool.md
+│   └── PULL_REQUEST_TEMPLATE.md
+│
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── LICENSE
+├── README.md
+├── .editorconfig
+├── .gitignore
+└── .prettierrc
+```
 
 
 > **Path rule (important):** GitHub Pages serves this repo at `https://mkrm0000.github.io/calcnoodle/`, so **root-relative paths (`/assets/...`) will break in production**. Every page uses **relative paths**:
