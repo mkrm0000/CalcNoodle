@@ -4,8 +4,8 @@
 
 **CalcNoodle** is a community-built hub of small, focused tools for engineering students and anyone who needs to crunch numbers, convert units, or look up a formula without wading through ads and sign-up walls.
 
-🌐 **Live site:** https://mkrm0000.github.io/calcnoodle/
-💻 **Repo:** https://github.com/mkrm0000/calcnoodle
+🌐 **Live site:** https://mkrm0000.github.io/CalcNoodle/
+💻 **Repo:** https://github.com/mkrm0000/CalcNoodle
 
 ---
 
